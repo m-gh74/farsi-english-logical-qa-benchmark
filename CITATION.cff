@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+title: "A Wikidata-Based Farsi–English Logical QA Benchmark"
+message: "If you use this dataset, please cite the accompanying paper."
+type: dataset
+authors:
+  - family-names: Ghorbaniparvariji
+    given-names: Morteza
+    affiliation: "University of Milan"
+  - family-names: Raganato
+    given-names: Alessandro
+    affiliation: "University of Milano-Bicocca"
+keywords:
+  - large language models
+  - logical reasoning
+  - cross-lingual evaluation
+  - Wikidata
+  - benchmark
+license: CC-BY-4.0
