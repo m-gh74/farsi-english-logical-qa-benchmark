@@ -1,25 +1,16 @@
-# A Wikidata-Based Farsi–English Logical QA Benchmark
+# Wikidata-Grounded Persian–English Benchmark for Entity-Set Question Answering
 
-A bilingual (Farsi–English) benchmark for **compositional logical reasoning** in Large
-Language Models, grounded in verified **Wikidata** relations and anchored in Iranian
-cultural, historical, and geographical domains. Each natural-language question maps to a
-formal Boolean logical expression (AND, OR, NOT) and a verifiable gold answer set anchored
-to Wikidata Q-IDs.
-
-This is the dataset accompanying the paper:
-
-> Ghorbaniparvariji, M. & Raganato, A. *From Atomic to Compositional: A Wikidata-Based
-> Farsi–English Logical QA Benchmark.* (Manuscript submitted to *Information Sciences*.)
+A bilingual Persian–English benchmark for Boolean compositional question answering over Iranian cultural, historical, geographical, artistic, and heritage domains. Each item is grounded in executable Wikidata/SPARQL structure and associated with language-independent Wikidata Q-ID answer sets for set-based evaluation of list-valued entity answers.
 
 ## Contents
 
-| File | Items | Description |
-|------|-------|-------------|
-| `data/mcq.csv` | 500 | Four-option multiple-choice questions (discriminative format) |
-| `data/open_ended.csv` | 500 | Open-ended questions with full gold answer sets (generative format) |
+| File | Rows | Description |
+|---|---:|---|
+| `data/mcq.csv` | 500 | Multiple-choice task instances. Each row contains Persian and English formulations of the same underlying logical query. |
+| `data/open_ended.csv` | 500 | Open-ended task instances with full Wikidata Q-ID gold answer sets. Each row contains Persian and English formulations of the same underlying logical query. |
 
-**1,000 queries total**, spanning **12 domains** and logical depths from atomic facts
-(0 operators) to three nested operators.
+
+The benchmark contains 500 underlying logical queries. Each query is realized in two task formats—open-ended question answering (OEQ) and multiple-choice question answering (MCQ)—yielding 1,000 format-level task instances. Each format-level instance is provided in Persian and English, yielding 2,000 language-specific formulations. The queries span 12 domains and logical complexities from atomic facts (0 operators) to three-operator Boolean compositions.
 
 ### `mcq.csv` columns
 - `question_id` — unique id
@@ -47,9 +38,6 @@ This is the dataset accompanying the paper:
 The dataset is released under the **Creative Commons Attribution 4.0 International
 (CC BY 4.0)** license — see `LICENSE`. You are free to share and adapt the data with
 attribution.
-
-## How to cite
-If you use this benchmark, please cite the paper (see `CITATION.cff`).
 
 ## Contact
 Morteza Ghorbaniparvariji — morteza.ghorbaniparvariji@studenti.unimi.it
